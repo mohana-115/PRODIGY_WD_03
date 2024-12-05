@@ -1,0 +1,155 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Title Styling */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Container for the game board and options */
+  .game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  /* Game Board Styling */
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 320px;
+  }
+  
+  /* Cell Styling */
+  .cell {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .cell:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cell.taken {
+    color: #888;
+    cursor: not-allowed;
+  }
+  
+  /* Mode Selection Styling */
+  #mode-selection {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  button {
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: #ff6f61;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  button:hover {
+    background: #ff4a33;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Reset Button Styling */
+  #reset-button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background: #ff6f61;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  #reset-button:hover {
+    background: #ff4a33;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  #reset-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .game-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    #game-board {
+      width: 90%;
+      gap: 8px;
+    }
+  
+    .cell {
+      font-size: 1.5rem;
+    }
+  
+    #mode-selection {
+      flex-direction: column; /* Ensure the buttons are stacked vertically */
+      gap: 10px;
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 8px 20px;
+    }
+  }
+  
